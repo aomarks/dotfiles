@@ -2,6 +2,7 @@
 set nocompatible
 
 " vundle packages
+filetype off " vundle likes this off during setup
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'       " this package manager
@@ -10,9 +11,13 @@ Plugin 'vim-airline/vim-airline'    " fancy status bar
 Plugin 'ctrlpvim/ctrlp.vim'         " fast file/buffer finder
 Plugin 'scrooloose/nerdtree'        " file navigator
 Plugin 'scrooloose/syntastic'       " syntax checking
+Plugin 'tpope/vim-fugitive'         " git commands and statusline
 Plugin 'fatih/vim-go'               " golang super plugin
 Plugin 'leafgarland/typescript-vim' " typescript syntax highlighting
 call vundle#end()
+
+" detect file types and load the corresponding plugin/indentation file
+filetype plugin indent on
 
 " put swap files here instead of in each file's own directory
 " '//' uses file's absolute path for the swap file name
@@ -85,7 +90,3 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
-" detect file type and load the corresponding plugin/indentation file
-" this should happen last in case we add some plugins 
-filetype plugin indent on
