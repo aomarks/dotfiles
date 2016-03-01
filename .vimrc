@@ -11,6 +11,9 @@ Plugin 'vim-airline/vim-airline'    " fancy status bar
 Plugin 'ctrlpvim/ctrlp.vim'         " fast file/buffer finder
 Plugin 'scrooloose/nerdtree'        " file navigator
 Plugin 'scrooloose/syntastic'       " syntax checking
+Plugin 'google/vim-codefmt'         " code formatting
+Plugin 'google/vim-maktaba'         " required by vim-codefmt
+Plugin 'google/vim-glaive'          " required by vim-codefmt
 Plugin 'tpope/vim-fugitive'         " git commands and statusline
 Plugin 'fatih/vim-go'               " golang super plugin
 Plugin 'leafgarland/typescript-vim' " typescript syntax highlighting
@@ -79,7 +82,7 @@ let g:syntastic_check_on_open = 1    " check as soon as a file is opened
 let g:syntastic_check_on_wq = 0      " skip checks when exiting
 
 " automatically maintain go imports
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = 'goimports'
 
 " there are lots of tools for checking go code
 let g:syntastic_go_checkers = ['go', 'gofmt', 'govet', 'golint']
@@ -90,3 +93,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" auto formatters
+augroup codefmt_settings
+  autocmd FileType javascript AutoFormatBuffer clang-format
+  autocmd FileType typescript AutoFormatBuffer clang-format
+augroup END
