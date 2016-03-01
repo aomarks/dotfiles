@@ -62,9 +62,12 @@ set wildmode=list:longest,full
 nmap j gj
 nmap k gk
 
-" navigate location list (e.g. syntastic errors)
+" navigate location/quickfix lists more easily (e.g. syntastic errors, grep)
+" taken from http://github.com/tpope/vim-unimpaired
 nmap [l :lprev<CR>
 nmap ]l :lnext<CR>
+nmap [q :cprev<CR>
+nmap ]q :cnext<CR>
 
 " toggle NERDTree more easily
 map <C-n> :NERDTreeToggle<CR>
@@ -72,8 +75,12 @@ map <C-n> :NERDTreeToggle<CR>
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
 
-" start ctrlp with most recently used files
-let g:ctrlp_cmd = 'CtrlPMRU'
+" use silver searcher for :grep
+set grepprg=ag\ --nogroup\ --nocolor
+
+" use silver searcher for listing files in ctrlp
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0 " it's so fast we don't need a file cache
 
 " syntax checking
 let g:syntastic_auto_loc_list = 1    " automatically open/close error window
