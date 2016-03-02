@@ -69,7 +69,10 @@ nmap ]l :lnext<CR>
 nmap [q :cprev<CR>
 nmap ]q :cnext<CR>
 
-" toggle NERDTree more easily
+" some common commands
+map <C-s> :w<CR>
+map <C-m> :CtrlPMRUFiles<CR>
+map <C-r> :SyntasticCheck<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " fancy status bar glyphs (requires amended font)
@@ -87,6 +90,9 @@ let g:syntastic_auto_loc_list = 1    " automatically open/close error window
 let g:syntastic_aggregate_errors = 1 " combine errors from different checkers
 let g:syntastic_check_on_open = 1    " check as soon as a file is opened
 let g:syntastic_check_on_wq = 0      " skip checks when exiting
+
+" some syntax checks are slow; don't run them automatically
+let g:syntastic_mode_map = {'passive_filetypes': ['typescript']}
 
 " automatically maintain go imports
 let g:go_fmt_command = 'goimports'
