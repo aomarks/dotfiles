@@ -72,7 +72,7 @@ nmap ]q :cnext<CR>
 " some common commands
 map <C-s> :w<CR>
 map <C-m> :CtrlPMRUFiles<CR>
-map <C-r> :SyntasticCheck<CR>
+map <C-t> :SyntasticCheck<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 " fancy status bar glyphs (requires amended font)
