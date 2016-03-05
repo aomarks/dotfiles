@@ -100,6 +100,9 @@ let g:go_fmt_command = 'goimports'
 " there are lots of tools for checking go code
 let g:syntastic_go_checkers = ['go', 'gofmt', 'govet', 'golint']
 
+" don't warn about typescript decorators
+let g:syntastic_typescript_tsc_post_args='--experimentalDecorators'
+
 " extended go highlighting
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
