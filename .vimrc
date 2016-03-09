@@ -17,6 +17,8 @@ Plugin 'google/vim-glaive'          " required by vim-codefmt
 Plugin 'tpope/vim-fugitive'         " git commands and statusline
 Plugin 'fatih/vim-go'               " golang super plugin
 Plugin 'leafgarland/typescript-vim' " typescript syntax highlighting
+Plugin 'moll/vim-bbye'              " delete buffer without closing window
+Plugin 'Valloric/YouCompleteMe'     " code-completion
 call vundle#end()
 
 " detect file types and load the corresponding plugin/indentation file
@@ -35,6 +37,8 @@ syntax enable
 set laststatus=2       " always show status line
 set number             " show line numbers in gutter
 set colorcolumn=80,100 " show vertical lines at these columns
+set cursorline         " make the current line more obvious
+set scrolloff=5        " minimum lines to keep above/below cursor
 
 " indentation
 set expandtab     " <tab> inserts spaces instead of a tab
@@ -74,6 +78,7 @@ map <C-s> :w<CR>
 map <C-m> :CtrlPMRUFiles<CR>
 map <C-t> :SyntasticCheck<CR>
 map <C-n> :NERDTreeToggle<CR>
+map <leader>c :Bdelete<CR>
 
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
