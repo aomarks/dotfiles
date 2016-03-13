@@ -74,11 +74,13 @@ nmap [q :cprev<CR>
 nmap ]q :cnext<CR>
 
 " some common commands
-map <C-s> :w<CR>
-map <C-m> :CtrlPMRUFiles<CR>
-map <C-t> :SyntasticCheck<CR>
-map <C-n> :NERDTreeToggle<CR>
-map <leader>c :Bdelete<CR>
+nmap <leader>q :SyntasticCheck<CR>
+nmap <leader>w :w<CR>
+nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>a :CtrlP<CR>
+nmap <leader>s :CtrlPMRU<CR>
+nmap <leader>d :CtrlPBuffer<CR>
+nmap <leader>z :Bdelete<CR>
 
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
