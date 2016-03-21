@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'       " this package manager
 Plugin 'NLKNguyen/papercolor-theme' " googley colors
 Plugin 'vim-airline/vim-airline'    " fancy status bar
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'         " fast file/buffer finder
 Plugin 'scrooloose/nerdtree'        " file navigator
 Plugin 'scrooloose/syntastic'       " syntax checking
@@ -32,6 +33,7 @@ set directory=~/.vim/swap//
 set background=dark
 color PaperColor
 syntax enable
+let g:airline_theme='dark'
 
 " status
 set laststatus=2       " always show status line
@@ -39,6 +41,10 @@ set number             " show line numbers in gutter
 set colorcolumn=80,100 " show vertical lines at these columns
 set cursorline         " make the current line more obvious
 set scrolloff=5        " minimum lines to keep above/below cursor
+
+" switch modes faster
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " indentation
 set expandtab     " <tab> inserts spaces instead of a tab
@@ -93,6 +99,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0 " it's so fast we don't need a file cache
 
 " syntax checking
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1    " automatically open/close error window
 let g:syntastic_aggregate_errors = 1 " combine errors from different checkers
 let g:syntastic_check_on_open = 1    " check as soon as a file is opened
