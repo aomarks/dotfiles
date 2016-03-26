@@ -63,6 +63,13 @@ set nowrapscan " don't wrap searches around the end of the file
 " mouse in all modes
 set mouse=a
 
+" gvim
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+set guioptions-=m " no menu bar
+set guioptions-=T " no toolbar
+set guioptions-=r " no RHS scroll bar
+set guioptions-=L " no LHS scroll bar
+
 " enhanced command-line completion
 " list matches and complete longest common string, then cycle through matches
 set wildmenu
@@ -80,13 +87,13 @@ nmap [q :cprev<CR>
 nmap ]q :cnext<CR>
 
 " some common commands
-nmap <leader>q :SyntasticCheck<CR>
+nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>w :w<CR>
-nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>a :CtrlP<CR>
-nmap <leader>s :CtrlPMRU<CR>
-nmap <leader>d :CtrlPBuffer<CR>
-nmap <leader>z :Bdelete<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>p :CtrlP<CR>
+nmap <leader>m :CtrlPMRU<CR>
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>x :Bdelete<CR>
 
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
