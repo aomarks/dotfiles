@@ -90,7 +90,7 @@ nmap ]q :cnext<CR>
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>w :w<CR>
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>p :CtrlP<CR>
+nmap <leader>f :CtrlP<CR>
 nmap <leader>m :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
