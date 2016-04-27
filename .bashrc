@@ -1,5 +1,13 @@
 # disable flow control so that C-s doesn't freeze the terminal
+# http://unix.stackexchange.com/q/12107
 stty -ixon
+
+# sync history across terminals
+# http://unix.stackexchange.com/q/1288
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 
 # cd to the first matching parent directory
 up() {
