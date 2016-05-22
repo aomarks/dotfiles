@@ -94,6 +94,7 @@ nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
+nmap <leader>c :cd %:p:h<CR>
 
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
