@@ -2,12 +2,24 @@
 # http://unix.stackexchange.com/q/12107
 stty -ixon
 
-# sync history across terminals
-# http://unix.stackexchange.com/q/1288
+# when a shell exits and writes history to disk, append rather than truncate
 shopt -s histappend
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# append new history lines to disk before each prompt (i.e. on return)
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# max lines of history in memory per shell
 export HISTSIZE=1000000
+
+# max lines of history on disk
 export HISTFILESIZE=1000000
+
+# don't store commands prefixed with a space in history
+# de-duplicate identical adjacent history lines (most recent wins)
+export HISTCONTROL=ignorespace:erasedups
+
+# sync history with disk (append new lines; clear; reload from disk)
+alias hr="history -a; history -c; history -r"
 
 # cd to the first matching parent directory
 up() {
