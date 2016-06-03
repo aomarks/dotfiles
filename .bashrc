@@ -19,7 +19,7 @@ export HISTFILESIZE=1000000
 export HISTCONTROL=ignorespace:erasedups
 
 # sync history with disk (append new lines; clear; reload from disk)
-alias hr="history -a; history -c; history -r"
+alias gh="history -a; history -c; history -r"
 
 # cd to the first matching parent directory
 up() {
