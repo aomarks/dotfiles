@@ -83,6 +83,10 @@ nmap k gk
 vmap < <gv
 vmap > >gv
 
+" newline insert doesn't enter insert mode, and keeps cursor on line
+nmap o o<Esc>k
+nmap O O<Esc>j
+
 " navigate location/quickfix lists more easily (e.g. syntastic errors, grep)
 " taken from http://github.com/tpope/vim-unimpaired
 nmap [l :lprev<CR>
