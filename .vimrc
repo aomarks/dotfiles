@@ -79,6 +79,10 @@ set wildmode=list:longest,full
 nmap j gj
 nmap k gk
 
+" don't unselect text when indenting
+vmap < <gv
+vmap > >gv
+
 " navigate location/quickfix lists more easily (e.g. syntastic errors, grep)
 " taken from http://github.com/tpope/vim-unimpaired
 nmap [l :lprev<CR>
@@ -94,7 +98,12 @@ nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
+
+" cd to directory of current file
 nmap <leader>c :cd %:p:h<CR>
+
+" search/replace word under cursor
+nmap <leader>z :%s/\<<C-r><C-w>\>//g<left><left>
 
 " fancy status bar glyphs (requires amended font)
 let g:airline_powerline_fonts = 1
