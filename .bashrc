@@ -18,6 +18,9 @@ export HISTFILESIZE=1000000
 # de-duplicate identical adjacent history lines (most recent wins)
 export HISTCONTROL=ignorespace:erasedups
 
+# how are timestamps formatted by the history command
+export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S] "
+
 # sync history with disk (append new lines; clear; reload from disk)
 alias gh="history -a; history -c; history -r"
 
@@ -44,9 +47,18 @@ grepy() {
 
 # search unique history
 hi() {
+  # assuming output format is "number  [date time] command"
   history | \
-  grep -vE "^[[:blank:]]*[[:digit:]]+[[:blank:]]+(history |$FUNCNAME )" | \
-  sort -k2 -k1nr | uniq -f1 | sort -n | grepy "$@"
+  # sort by command and then ascending history number
+  sort -k4 -k1nr | \
+  # remove duplicate commands, preferring the most recent
+  uniq -f3 | \
+  # re-sort by history number
+  sort -n | \
+  # filter out history commands (including this one) because they are boring
+  grep -vE '] (history|hi)( |$|\|)' | \
+  # filter for terms
+  grepy "$@"
 }
 
 # search notes
