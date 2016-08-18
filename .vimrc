@@ -46,6 +46,10 @@ set scrolloff=5        " minimum lines to keep above/below cursor
 set timeoutlen=1000
 set ttimeoutlen=0
 
+" when switching away from a buffer, make it "hidden" instead of unloading it,
+" so that vim doesn't complain about abandoning buffers with unsaved changes
+set hidden
+
 " indentation
 set expandtab     " <tab> inserts spaces instead of a tab
 set tabstop=2     " number of columns to draw for a tab character
