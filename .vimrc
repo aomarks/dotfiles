@@ -102,6 +102,7 @@ nmap ]q :cnext<CR>
 nmap <leader>s :SyntasticCheck<CR>
 nmap <leader>w :w<CR>
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeFind<CR>
 nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
@@ -154,3 +155,9 @@ augroup codefmt_settings
   autocmd FileType javascript AutoFormatBuffer clang-format
   autocmd FileType typescript AutoFormatBuffer clang-format
 augroup END
+
+" NERDTree
+let NERDTreeShowBookmarks = 1    " show bookmarks on startup
+let NERDTreeShowHidden = 1       " show hidden files on startup
+let NERDTreeMinimalUI = 1        " dont show help text
+let NERDTreeAutoDeleteBuffer = 1 " always reload buffer when file moved
