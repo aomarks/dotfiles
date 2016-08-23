@@ -5,21 +5,22 @@ set nocompatible
 filetype off " vundle likes this off during setup
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'       " this package manager
-Plugin 'NLKNguyen/papercolor-theme' " googley colors
-Plugin 'vim-airline/vim-airline'    " fancy status bar
+Plugin 'VundleVim/Vundle.vim'        " this package manager
+Plugin 'NLKNguyen/papercolor-theme'  " googley colors
+Plugin 'vim-airline/vim-airline'     " fancy status bar
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'         " fast file/buffer finder
-Plugin 'scrooloose/nerdtree'        " file navigator
-Plugin 'scrooloose/syntastic'       " syntax checking
-Plugin 'google/vim-codefmt'         " code formatting
-Plugin 'google/vim-maktaba'         " required by vim-codefmt
-Plugin 'google/vim-glaive'          " required by vim-codefmt
-Plugin 'tpope/vim-fugitive'         " git commands and statusline
-Plugin 'fatih/vim-go'               " golang super plugin
-Plugin 'leafgarland/typescript-vim' " typescript syntax highlighting
-Plugin 'moll/vim-bbye'              " delete buffer without closing window
-Plugin 'Valloric/YouCompleteMe'     " code-completion
+Plugin 'ctrlpvim/ctrlp.vim'          " fast file/buffer finder
+Plugin 'scrooloose/nerdtree'         " file navigator
+Plugin 'Xuyuanp/nerdtree-git-plugin' " git for NERDTree
+Plugin 'scrooloose/syntastic'        " syntax checking
+Plugin 'google/vim-codefmt'          " code formatting
+Plugin 'google/vim-maktaba'          " required by vim-codefmt
+Plugin 'google/vim-glaive'           " required by vim-codefmt
+Plugin 'tpope/vim-fugitive'          " git commands and statusline
+Plugin 'fatih/vim-go'                " golang super plugin
+Plugin 'leafgarland/typescript-vim'  " typescript syntax highlighting
+Plugin 'moll/vim-bbye'               " delete buffer without closing window
+Plugin 'Valloric/YouCompleteMe'      " code-completion
 call vundle#end()
 
 " detect file types and load the corresponding plugin/indentation file
