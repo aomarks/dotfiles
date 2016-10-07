@@ -63,7 +63,7 @@ hi() {
 
 # search notes
 no() {
-  cd $HOME/git/notes
-  awk '{print FILENAME"\t"$0}' * | grepy "$@"
+  cd $HOME/notes
+  awk '{print FILENAME"\t"$0}' */* | grepy "$@"
   cd - > /dev/null
 }
