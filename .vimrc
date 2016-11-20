@@ -11,6 +11,7 @@ Plugin 'vim-airline/vim-airline'     " fancy status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'          " fast file/buffer finder
 Plugin 'scrooloose/nerdtree'         " file navigator
+Plugin 'scrooloose/nerdcommenter'    " commenting functions
 Plugin 'Xuyuanp/nerdtree-git-plugin' " git for NERDTree
 Plugin 'scrooloose/syntastic'        " syntax checking
 Plugin 'google/vim-codefmt'          " code formatting
@@ -132,8 +133,8 @@ let g:syntastic_aggregate_errors = 1 " combine errors from different checkers
 let g:syntastic_check_on_open = 1    " check as soon as a file is opened
 let g:syntastic_check_on_wq = 0      " skip checks when exiting
 
-" some syntax checks are slow; don't run them automatically
-let g:syntastic_mode_map = {'passive_filetypes': ['typescript']}
+" some syntax checks are slow or are bad; don't run them automatically
+let g:syntastic_mode_map = {'passive_filetypes': ['typescript', 'html']}
 
 " automatically maintain go imports
 let g:go_fmt_command = 'goimports'
