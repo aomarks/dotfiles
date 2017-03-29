@@ -109,6 +109,7 @@ nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
+nmap <leader>d :YcmCompleter GoToDefinition<CR>
 
 " cd to directory of current file
 nmap <leader>c :cd %:p:h<CR>
