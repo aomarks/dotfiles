@@ -109,7 +109,11 @@ nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
-nmap <leader>d :YcmCompleter GoToDefinition<CR>
+nmap <leader>d :YcmCompleter GetDoc<CR>
+nmap <leader>g :YcmCompleter GoToDefinition<CR>
+
+" search for current visual selection
+vmap // y/<C-R>"<CR>
 
 " cd to directory of current file
 nmap <leader>c :cd %:p:h<CR>
