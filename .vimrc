@@ -52,6 +52,11 @@ set ttimeoutlen=0
 " so that vim doesn't complain about abandoning buffers with unsaved changes
 set hidden
 
+" By default, backspace in insert mode will not remove autoindentation, line
+" breaks, or anything before the position where indent mode was entered
+" (although many distros override this default). Allow all of these instead.
+set backspace=indent,eol,start
+
 " indentation
 set expandtab     " <tab> inserts spaces instead of a tab
 set tabstop=2     " number of columns to draw for a tab character
