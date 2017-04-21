@@ -41,7 +41,7 @@ update-all() {
   echo "> nvm"
   nvm-update
   echo "> npm"
-  npm update -g
+  npm outdated -g | sed 1d | cut -d ' ' -f1 | xargs npm install -g
   echo "> vim"
   vim +PluginUpdate +qall
 }
