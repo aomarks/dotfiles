@@ -74,13 +74,6 @@ set nowrapscan " don't wrap searches around the end of the file
 " mouse in all modes
 set mouse=a
 
-" gvim
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
-set guioptions-=m " no menu bar
-set guioptions-=T " no toolbar
-set guioptions-=r " no RHS scroll bar
-set guioptions-=L " no LHS scroll bar
-
 " enhanced command-line completion
 " list matches and complete longest common string, then cycle through matches
 set wildmenu
