@@ -108,7 +108,9 @@ nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>x :Bdelete<CR>
 nmap <leader>d :YcmCompleter GetDoc<CR>
+nmap <leader>t :YcmCompleter GetType<CR>
 nmap <leader>g :YcmCompleter GoToDefinition<CR>
+nmap <leader>h :YcmCompleter GoToReferences<CR>
 
 " search for current visual selection
 vmap // y/<C-R>"<CR>
