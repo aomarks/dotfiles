@@ -107,6 +107,7 @@ nmap <leader>d :YcmCompleter GetDoc<CR>
 nmap <leader>t :YcmCompleter GetType<CR>
 nmap <leader>g :YcmCompleter GoToDefinition<CR>
 nmap <leader>h :YcmCompleter GoToReferences<CR>
+nmap <leader>i :set wrap!<CR>
 
 " search for current visual selection
 vmap // y/<C-R>"<CR>
