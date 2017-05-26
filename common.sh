@@ -21,8 +21,12 @@ export HISTCONTROL=ignorespace:erasedups
 # how are timestamps formatted by the history command
 export HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S] "
 
-# sync history with disk (append new lines; clear; reload from disk)
-alias gh="history -a; history -c; history -r"
+# sync history with disk
+gh() {
+  history -a # append new history to disk
+  history -c # clear in memory history
+  history -r # reload all history from disk
+}
 
 # cd to the first matching parent directory
 up() {
