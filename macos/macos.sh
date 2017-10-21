@@ -34,7 +34,7 @@ update-all() {
   echo "> nvm"
   nvm-update
   echo "> npm"
-  npm outdated -g | sed 1d | cut -d ' ' -f1 | xargs npm install -g
+  npm outdated -g | grep -Ev ' linked$' | sed 1d | cut -d ' ' -f1 | xargs npm install -g
   echo "> vim"
   vim +PluginUpdate +qall
 }
