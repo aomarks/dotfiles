@@ -102,7 +102,7 @@ nmap <leader>m :NERDTreeFind<CR>
 nmap <leader>f :CtrlP<CR>
 nmap <leader>r :CtrlPMRU<CR>
 nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>x :Bdelete<CR>
+nmap <leader>x :Bdelete!<CR>
 nmap <leader>d :YcmCompleter GetDoc<CR>
 nmap <leader>t :YcmCompleter GetType<CR>
 nmap <leader>g :YcmCompleter GoToDefinition<CR>

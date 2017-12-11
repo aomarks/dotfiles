@@ -4,3 +4,5 @@
 	useConfigOnly = true
 [core]
 	editor = /usr/bin/env vim
+[push]
+	default = current
