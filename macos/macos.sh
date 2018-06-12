@@ -43,3 +43,5 @@ update-all() {
   echo "> vim"
   vim +PluginUpdate +qall
 }
+
+alias npx="npx --no-install"
