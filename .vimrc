@@ -44,6 +44,9 @@ set colorcolumn=80,100 " show vertical lines at these columns
 set cursorline         " make the current line more obvious
 set scrolloff=5        " minimum lines to keep above/below cursor
 
+" automatically change working directory to match current file
+set autochdir
+
 " switch modes faster
 set timeoutlen=1000
 set ttimeoutlen=0
