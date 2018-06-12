@@ -9,10 +9,10 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # max lines of history in memory per shell
-export HISTSIZE=1000000
+export HISTSIZE=1000
 
 # max lines of history on disk
-export HISTFILESIZE=1000000
+export HISTFILESIZE=10000
 
 # don't store commands prefixed with a space in history
 # de-duplicate identical adjacent history lines (most recent wins)
@@ -74,5 +74,5 @@ no() {
 
 recompile-ycm() {
   cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer --gocode-completer --tern-completer
+  ./install.py --clang-completer --tern-completer
 }
