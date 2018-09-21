@@ -67,6 +67,7 @@ set softtabstop=2 " number of spaces to insert when pressing <tab>
 set shiftwidth=2  " number of spaces to insert when indenting
 set autoindent    " use the previous line's indent when starting a new line
 set textwidth=80  " wrap text at this column
+set nojoinspaces  " don't put two spaces between lines when joining
 
 " search
 set ignorecase " case insensitive by default
