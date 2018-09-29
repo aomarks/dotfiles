@@ -1,4 +1,8 @@
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
+if has('macunix')
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
+else
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+endif
 
 set guioptions-=m " no menu bar
 set guioptions-=T " no toolbar
