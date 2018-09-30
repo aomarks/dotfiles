@@ -9,6 +9,10 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Load X specific configuration. This may or may not have already happened
+# depending on how i3 was launched.
+exec_always "sh .xprofile"
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
