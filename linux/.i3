@@ -164,3 +164,6 @@ bar {
 bindsym $mod+F12 exec gnome-screensaver-command -l
 bindsym $mod+Prior exec amixer set Master 5%+ # PageUp
 bindsym $mod+Next exec amixer set Master 5%- # PageDown
+bindsym $mod+c exec google-chrome
+bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
+bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
