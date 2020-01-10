@@ -1,4 +1,4 @@
-URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=14,style=regular
+URxvt.font: xft:Ubuntu Mono:pixelsize=14,style=regular
 URxvt.cursorBlink: true
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: google-chrome
@@ -36,3 +36,6 @@ URxvt*scrollTtyKeypress: true
 ! white
 *color7:  #cccccc
 *color15: #ffffff
+
+Xcursor.size: 16
+xterm*metaSendsEscape: true
