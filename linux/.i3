@@ -13,6 +13,9 @@
 # depending on how i3 was launched.
 exec_always "sh .xprofile"
 
+# Load the compton compositor
+exec --no-startup-id compton --backend=glx
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
