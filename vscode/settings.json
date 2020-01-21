@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "Ubuntu Mono",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "keyboard.dispatch": "keyCode",
+    "html.mirrorCursorOnMatchingTag": false,
+    "html.autoClosingTags": false
+}
