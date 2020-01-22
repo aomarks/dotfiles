@@ -6,5 +6,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "keyboard.dispatch": "keyCode",
     "html.mirrorCursorOnMatchingTag": false,
-    "html.autoClosingTags": false
+    "html.autoClosingTags": false,
+    "workbench.tree.indent": 18,
+    "workbench.tree.renderIndentGuides": "always"
 }
