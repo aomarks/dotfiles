@@ -14,7 +14,7 @@
 exec_always "sh .xprofile"
 
 # Load the compton compositor
-exec --no-startup-id compton --backend=glx
+exec compton --backend=glx
 
 set $mod Mod4
 
@@ -66,12 +66,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -130,31 +124,17 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+bindsym $mod+Mod1+Shift+h resize grow left 100 px
+bindsym $mod+Mod1+Shift+l resize shrink left 100 px
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+bindsym $mod+Mod1+l resize grow right 100 px
+bindsym $mod+Mod1+h resize shrink right 100 px
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+bindsym $mod+Mod1+k resize grow up 100 px
+bindsym $mod+Mod1+j resize shrink up 100 px
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Caps_Lock mode "default"
-}
-
-bindsym $mod+r mode "resize"
+bindsym $mod+Mod1+Shift+j resize grow down 100 px
+bindsym $mod+Mod1+Shift+k resize shrink down 100 px
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -170,3 +150,5 @@ bindsym $mod+Next exec amixer set Master 5%- # PageDown
 bindsym $mod+c exec google-chrome
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+question exec google-chrome --app=https://www.aomarks.com/cheat.html
+for_window [title="^aomarks / cheatsheet$"] floating enable resize set 800 500, move position 0 0
