@@ -15,8 +15,6 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Resize window
-# hold $mod and mouse drag to resize
-floating_modifier $mod
 # top edge up
 bindsym $mod+Mod1+k resize grow up 100 px
 # top edge down
@@ -64,11 +62,12 @@ bindsym $mod+e layout toggle split
 
 # Fullscreen
 bindsym $mod+f fullscreen
-bindsym $mod+p sticky toggle
 
 # Floating
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+bindsym $mod+p sticky toggle
+floating_modifier $mod
 
 # Container splitting
 bindsym $mod+v split v
