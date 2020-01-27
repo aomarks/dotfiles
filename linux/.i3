@@ -94,6 +94,7 @@ bindsym $mod+backslash scratchpad show
 bindsym $mod+m exec i3-chrome-scratch.sh https://open.spotify.com/ open.spotify.com
 bindsym $mod+question exec i3-chrome-scratch.sh https://www.aomarks.com/cheat.html www.aomarks.com__cheat.html
 bindsym $mod+y exec i3-chrome-scratch.sh https://youtube.com/ youtube.com
+bindsym $mod+grave exec i3-scratch-term.sh
 
 # Screenshot
 bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
@@ -119,3 +120,5 @@ bar {
   tray_output primary
   position top
 }
+
+for_window[class=".*"] border pixel 1
