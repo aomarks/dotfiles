@@ -104,6 +104,11 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Volume
+bindsym XF86AudioRaiseVolume exec amixer set Master 1%+
+bindsym XF86AudioLowerVolume exec amixer set Master 1%-
+bindsym XF86AudioMute        exec amixer set Master toggle
+
 # Font for window titles and bar
 font pango:Ubuntu Mono 10
 
@@ -121,4 +126,5 @@ bar {
   position top
 }
 
+# No window titles
 for_window[class=".*"] border pixel 1
