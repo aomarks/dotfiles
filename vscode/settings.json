@@ -8,5 +8,15 @@
     "html.mirrorCursorOnMatchingTag": false,
     "html.autoClosingTags": false,
     "workbench.tree.indent": 18,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.highlightModifiedTabs": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
