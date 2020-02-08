@@ -1,3 +1,16 @@
+# exec        launch on i3 startup (but not restart)
+# exec_always launch on i3 startup and restart
+#
+# --no-startup-id
+# Disable startup notification, which is a way for an X application and its
+# launcher to communicate about the startup process, to ensure that windows
+# open on the same display they were launched from, and so that the launcher
+# can indicate that there is an application launching by showing a spinning
+# cursor. Not all applications support startup notification, so turning it off
+# will prevent showing a spinning cursor unnecessarily (it times out after 60
+# seconds).
+# https://specifications.freedesktop.org/startup-notification-spec/startup-notification-latest.txt
+
 # Mod4 is usually mapped to the Super (Windows) key.
 # Run xmodmap to check mod mappings.
 set $mod Mod4
