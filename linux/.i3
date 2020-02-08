@@ -117,10 +117,10 @@ font pango:Ubuntu Mono 10
 
 # X specific configuration. May or may not have already happened depending on
 # how i3 was launched.
-exec_always "sh .xprofile"
+exec_always --no-startup-id "sh .xprofile"
 
 # Compton compositor
-exec compton --backend=glx
+exec --no-startup-id compton --backend=glx
 
 # i3bar
 bar {
