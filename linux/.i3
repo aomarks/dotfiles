@@ -100,17 +100,17 @@ bindsym $mod+Shift+q kill
 # Launching apps
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec x-www-browser
 
 # Scratchpad
 bindsym $mod+Shift+backslash move scratchpad
 bindsym $mod+backslash scratchpad show
 
 # Special scratch windows
-bindsym $mod+m exec i3-chrome-scratch.sh https://open.spotify.com/ open.spotify.com
-bindsym $mod+question exec i3-chrome-scratch.sh https://www.aomarks.com/cheat.html www.aomarks.com__cheat.html
-bindsym $mod+y exec i3-chrome-scratch.sh https://youtube.com/ youtube.com
-bindsym $mod+grave exec i3-scratch-term.sh
+bindsym $mod+m        exec i3-scratch-browser.sh https://open.spotify.com/ open.spotify.com
+bindsym $mod+question exec i3-scratch-browser.sh https://www.aomarks.com/cheat.html www.aomarks.com__cheat.html
+bindsym $mod+y        exec i3-scratch-browser.sh https://youtube.com/ youtube.com
+bindsym $mod+grave    exec i3-scratch-term.sh
 
 # Screenshot
 bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
@@ -141,6 +141,3 @@ bar {
   tray_output primary
   position top
 }
-
-# No window titles
-for_window[class=".*"] border pixel 1
