@@ -6,7 +6,8 @@ URL=$1
 INSTANCE=$2
 
 if [[ $(i3-msg "[instance=\"$INSTANCE\"]" scratchpad show) =~ '"success":false' ]]; then
-  google-chrome --app=$URL
+  # Assumes x-www-browser is a Chromium-based browser
+  x-www-browser --app=$URL
   i3-msg "[instance=\"$INSTANCE\"] move scratchpad"
   i3-msg "[instance=\"$INSTANCE\"] scratchpad show"
   i3-msg "[instance=\"$INSTANCE\"] sticky enable"
