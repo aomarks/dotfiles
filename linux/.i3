@@ -82,7 +82,7 @@ bindsym $mod+f fullscreen
 # Floating
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+p sticky toggle
+bindsym $mod+t sticky toggle
 floating_modifier $mod
 
 # Container splitting
@@ -107,10 +107,11 @@ bindsym $mod+Shift+backslash move scratchpad
 bindsym $mod+backslash scratchpad show
 
 # Special scratch windows
-bindsym $mod+m        exec i3-scratch-browser.sh https://open.spotify.com/ open.spotify.com
-bindsym $mod+question exec i3-scratch-browser.sh https://www.aomarks.com/cheat.html www.aomarks.com__cheat.html
-bindsym $mod+y        exec i3-scratch-browser.sh https://youtube.com/ youtube.com
-bindsym $mod+grave    exec i3-scratch-term.sh
+bindsym $mod+m        exec i3-scratcher.sh "x-www-browser --app=https://open.spotify.com/" open.spotify.com
+bindsym $mod+question exec i3-scratcher.sh "x-www-browser --app=https://www.aomarks.com/cheat.html" www.aomarks.com__cheat.html
+bindsym $mod+y        exec i3-scratcher.sh "x-www-browser --app=https://youtube.com/feed/subscriptions" youtube.com__feed_subscriptions
+bindsym $mod+grave    exec i3-scratcher.sh "i3-sensible-terminal -name scratchterm" scratchterm
+bindsym $mod+p        exec i3-scratcher.sh "keepassxc" keepassxc
 
 # Screenshot
 bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
