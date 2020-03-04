@@ -91,8 +91,12 @@ bindsym $mod+b split h
 
 # Container focus
 bindsym $mod+a focus parent
-# focus the child container
+# Focus the child container
 bindsym $mod+Shift+a focus child
+
+# Move the current workspace to the left or right monitor
+bindsym $mod+less    move workspace to output left
+bindsym $mod+greater move workspace to output right
 
 # Kill window
 bindsym $mod+Shift+q kill
