@@ -114,6 +114,8 @@ bindsym $mod+backslash scratchpad show
 bindsym $mod+m        exec i3-scratcher.sh "x-www-browser --app=https://open.spotify.com/" open.spotify.com
 bindsym $mod+question exec i3-scratcher.sh "x-www-browser --app=https://www.aomarks.com/cheat.html" www.aomarks.com__cheat.html
 bindsym $mod+y        exec i3-scratcher.sh "x-www-browser --app=https://youtube.com/feed/subscriptions" youtube.com__feed_subscriptions
+bindsym $mod+i        exec i3-scratcher.sh "x-www-browser --app=https://todoist.com/app" todoist.com__app
+bindsym $mod+o        exec i3-scratcher.sh "x-www-browser --app=https://keep.google.com" keep.google.com
 bindsym $mod+grave    exec i3-scratcher.sh "i3-sensible-terminal -name scratchterm" scratchterm
 bindsym $mod+p        exec i3-scratcher.sh "keepassxc" keepassxc
 
