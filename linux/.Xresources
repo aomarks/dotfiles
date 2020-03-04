@@ -1,7 +1,7 @@
 URxvt.font: xft:Ubuntu Mono:pixelsize=14,style=regular
 URxvt.cursorBlink: true
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: google-chrome
+URxvt.url-launcher: x-www-browser
 URxvt.matcher.button: 1
 URxvt.cutchars: string
 URxvt*scrollBar_right: true
