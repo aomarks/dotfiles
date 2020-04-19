@@ -31,6 +31,15 @@ set nowrapscan
 " case insensitive search by default, unless there's a capital
 set ignorecase smartcase
 
+" \s to start search/replace for word under cursor
+:nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
+" \w to write
+nmap <leader>w :w<CR>
+
+" \p to toggle wrap
+nmap <leader>p :set wrap!<CR>
+
 " always keep this many lines above/below cursor
 set scrolloff=5
 

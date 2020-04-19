@@ -28,6 +28,23 @@
   // Workaround bug where Caps Lock -> Escape re-binding doesn't work
   // https://github.com/microsoft/vscode/issues/23991 (default: code).
   "keyboard.dispatch": "keyCode",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // \w to write file
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    // \o to toggle wordwrap
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["editor.action.toggleWordWrap"]
+    },
+    // \s to start search/replace of word under cursor
+    {
+      "before": ["<leader>", "s"],
+      "after": [":", "%", "s", "/", "<C-r>", "<C-w>", "/"]
+    }
+  ],
   // Language-specific settings.
   "[javascript]": {
     // Format JavaScript with Prettier (default: none).
