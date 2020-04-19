@@ -5,12 +5,11 @@
   "editor.tabSize": 2,
   // Auto-foramt on save (default: false).
   "editor.formatOnSave": true,
-
   // On launch, open a new empty file (default: welcome screen).
   "workbench.startupEditor": "newUntitledFile",
   // How much to indent each level in file explorer (default: 8px).
   "workbench.tree.indent": 18,
-  // Always show visual level guides in file explorer (default: on hover)
+  // Always show visual level guides in file explorer (default: on hover).
   "workbench.tree.renderIndentGuides": "always",
   // Toggle the top menu bar with Alt (default: always visible).
   "window.menuBarVisibility": "toggle",
@@ -20,7 +19,8 @@
   "workbench.editor.highlightModifiedTabs": true,
   // Don't automatically close HTML tags (default: true).
   "html.autoClosingTags": false,
-
+  // Don't automatically reveal current file in file explorer (default: true).
+  "explorer.autoReveal": false,
   // Highlight all text matching current search (default: false).
   "vim.hlsearch": true,
   // Don't wrap searches around the end of the file (default: true).
@@ -28,7 +28,6 @@
   // Workaround bug where Caps Lock -> Escape re-binding doesn't work
   // https://github.com/microsoft/vscode/issues/23991 (default: code).
   "keyboard.dispatch": "keyCode",
-
   // Language-specific settings.
   "[javascript]": {
     // Format JavaScript with Prettier (default: none).
