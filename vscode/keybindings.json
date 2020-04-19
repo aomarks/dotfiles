@@ -1,3 +1,25 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+  // For VSCodeVim, move up and down by visual line when wrapped
+  // (default: by actual file line)
+  {
+    "key": "up",
+    "command": "cursorUp",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "cursorDown",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "k",
+    "command": "cursorUp",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "j",
+    "command": "cursorDown",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  }
 ]
