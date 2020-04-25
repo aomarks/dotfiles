@@ -3,7 +3,7 @@
   "editor.fontFamily": "Ubuntu Mono",
   // Number of spaces to insert for per Tab press (default: 4).
   "editor.tabSize": 2,
-  // Auto-foramt on save (default: false).
+  // Auto-format on save (default: false).
   "editor.formatOnSave": true,
   // On launch, open a new empty file (default: welcome screen).
   "workbench.startupEditor": "newUntitledFile",
@@ -21,33 +21,13 @@
   "html.autoClosingTags": false,
   // Don't automatically reveal current file in file explorer (default: true).
   "explorer.autoReveal": false,
-  // Highlight all text matching current search (default: false).
-  "vim.hlsearch": true,
-  // Don't wrap searches around the end of the file (default: true).
-  "vim.wrapscan": false,
   // Workaround bug where Caps Lock -> Escape re-binding doesn't work
   // https://github.com/microsoft/vscode/issues/23991 (default: code).
   "keyboard.dispatch": "keyCode",
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // \w to write file
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    // \o to toggle wordwrap
-    {
-      "before": ["<leader>", "o"],
-      "commands": ["editor.action.toggleWordWrap"]
-    },
-    // \s to start search/replace of word under cursor
-    {
-      "before": ["<leader>", "s"],
-      "after": [":", "%", "s", "/", "<C-r>", "<C-w>", "/"]
-    }
-  ],
   // Language-specific settings.
   "[javascript]": {
     // Format JavaScript with Prettier (default: none).
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "vscode-neovim.neovimPath": "/home/aomarks/bin/nvim"
 }
