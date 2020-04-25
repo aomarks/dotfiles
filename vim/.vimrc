@@ -2,7 +2,7 @@
 set nocompatible
 
 " enable syntax highlighting
-syntax enable
+syntax on
 
 " show line numbers in the gutter
 set number
@@ -32,7 +32,7 @@ set nowrapscan
 set ignorecase smartcase
 
 " \s to start search/replace for word under cursor
-:nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " \w to write
 nmap <leader>w :w<CR>
@@ -68,6 +68,23 @@ set nojoinspaces  " don't put two spaces after a [.?!] when joining lines
 " list buffers and prompt for the buffer to open
 :nnoremap <leader>b :ls<CR>:b<Space>
 
+" use ripgrep as grep command if available
 if executable("rg")
   set grepprg=rg\ --vimgrep\ --no-heading
 endif
+
+" \, -> edit vim config
+map <leader>, :e $MYVIMRC<CR>
+
+" \, -> save and load a vim script
+nmap <leader>. :w<CR>:so %<CR>
+
+" automatically reload vim config after saving it
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC
+
+" settings to apply only when using vscode-neovim
+if exists('g:vscode')
+  " match wordwrap toggle binding
+  nnoremap <leader>p <Cmd>call VSCodeCall('editor.action.toggleWordWrap')<CR>
+endif
+
