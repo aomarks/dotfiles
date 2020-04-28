@@ -29,5 +29,8 @@
     // Format JavaScript with Prettier (default: none).
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vscode-neovim.neovimPath": "/home/aomarks/bin/nvim"
+  // Path to neovim for vscode-neovim extension.
+  "vscode-neovim.neovimPath": "/home/aomarks/bin/nvim",
+  // vscode-neovim says it works better with this disabled (default: true).
+  "editor.scrollBeyondLastLine": false
 }

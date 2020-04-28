@@ -35,10 +35,18 @@ set ignorecase smartcase
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " \w to write
-nmap <leader>w :w<CR>
+if exists('g:vscode')
+  nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
+else
+  nmap <leader>w :w<CR>
+endif
 
 " \p to toggle wrap
-nmap <leader>p :set wrap!<CR>
+if exists('g:vscode')
+  nnoremap <leader>p <Cmd>call VSCodeCall('editor.action.toggleWordWrap')<CR>
+else
+  nmap <leader>p :set wrap!<CR>
+endif
 
 " always keep this many lines above/below cursor
 set scrolloff=5
@@ -66,7 +74,7 @@ set textwidth=80  " wrap text at this column
 set nojoinspaces  " don't put two spaces after a [.?!] when joining lines
 
 " list buffers and prompt for the buffer to open
-:nnoremap <leader>b :ls<CR>:b<Space>
+nnoremap <leader>b :ls<CR>:b<Space>
 
 " use ripgrep as grep command if available
 if executable("rg")
@@ -81,10 +89,3 @@ nmap <leader>. :w<CR>:so %<CR>
 
 " automatically reload vim config after saving it
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
-
-" settings to apply only when using vscode-neovim
-if exists('g:vscode')
-  " match wordwrap toggle binding
-  nnoremap <leader>p <Cmd>call VSCodeCall('editor.action.toggleWordWrap')<CR>
-endif
-
