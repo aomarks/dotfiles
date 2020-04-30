@@ -32,5 +32,7 @@
   // Path to neovim for vscode-neovim extension.
   "vscode-neovim.neovimPath": "/home/aomarks/bin/nvim",
   // vscode-neovim says it works better with this disabled (default: true).
-  "editor.scrollBeyondLastLine": false
+  "editor.scrollBeyondLastLine": false,
+  // Don't flatten dirs with one file in file explorer (default: true)
+  "explorer.compactFolders": false,
 }
