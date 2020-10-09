@@ -26,7 +26,7 @@ fi
 
 if [[ $NODE_CODE == 0 ]]
 then echo -e "[${GREEN}OK${RESET}] Node.js"
-else echo -e "[${RED}!!${RESET}] Node.js (https://nodejs.org/dist/latest/)"; EXITCODE=1
+else echo -e "[${RED}!!${RESET}] Node.js (update-node-version.sh)"; EXITCODE=1
 fi
 
 if [[ $NPM_CODE == 0 ]]
