@@ -2,8 +2,9 @@
 	name = Alexander Marks
 	# Require explicit user.name and user.email settings. Don't guess them.
 	useConfigOnly = true
-	email = aomarks@gmail.com
 [core]
 	editor = /usr/bin/env vim
 [push]
 	default = current
+[pull]
+	ff = only
