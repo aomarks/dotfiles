@@ -120,7 +120,7 @@ bindsym $mod+grave    exec i3-scratcher.sh "i3-sensible-terminal -name scratchte
 bindsym $mod+p        exec i3-scratcher.sh "keepassxc" keepassxc
 
 # Screenshot
-bindsym $mod+Shift+s exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+s exec maim --select --hidecursor | xclip -selection clipboard -t image/png
 
 # Reload/Restart/Exit i3
 bindsym $mod+Shift+c reload
