@@ -139,8 +139,8 @@ font pango:Ubuntu Mono 10
 # how i3 was launched.
 exec_always --no-startup-id "sh .xprofile"
 
-# Compton compositor
-exec --no-startup-id compton --backend=glx
+# Picom compositor
+exec --no-startup-id picom --backend=glx
 
 # i3bar
 bar {
