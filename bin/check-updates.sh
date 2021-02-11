@@ -9,7 +9,7 @@ check-node-version.sh
 NODE_CODE=$?
 echo
 
-npm --global outdated
+npm --global outdated | tee /dev/stderr | grep -q "Wanted"
 NPM_CODE=$?
 echo
 
@@ -29,7 +29,7 @@ then echo -e "[${GREEN}OK${RESET}] Node.js"
 else echo -e "[${RED}!!${RESET}] Node.js (update-node-version.sh)"; EXITCODE=1
 fi
 
-if [[ $NPM_CODE == 0 ]]
+if [[ $NPM_CODE != 0 ]]
 then echo -e "[${GREEN}OK${RESET}] NPM"
 else echo -e "[${RED}!!${RESET}] NPM (npm --global update)"; EXITCODE=1
 fi
