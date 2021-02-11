@@ -56,9 +56,8 @@ let &t_SI = "\<Esc>[6 q" " insert  = bar
 let &t_SR = "\<Esc>[4 q" " replace = underline
 let &t_EI = "\<Esc>[2 q" " normal  = block
 
-" put swap files here instead of in each file's own directory
-" '//' uses file's absolute path for the swap file name
-set directory=~/.vim/swap//
+" no swap files, I never use them
+set noswapfile
 
 " move up and down by visual line when wrapped, instead of by file line
 nmap j gj
@@ -84,7 +83,7 @@ endif
 " \, -> edit vim config
 map <leader>, :e $MYVIMRC<CR>
 
-" \, -> save and load a vim script
+" \. -> save and load a vim script
 nmap <leader>. :w<CR>:so %<CR>
 
 " automatically reload vim config after saving it
