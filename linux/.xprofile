@@ -1,3 +1,4 @@
 export TERMINAL=urxvt
 xset r rate 220 45
-xrandr --output DP-2 --mode 2560x1440 --rate 165
+xrandr --output DP-2 --mode 3840x2160 --rate 60 --scale 1x1
+xrandr --output DP-4 --mode 2560x1440 --rate 165 --scale 1.5x1.5 --pos 3840x0 --right-of DP-2
