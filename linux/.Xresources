@@ -1,4 +1,4 @@
-URxvt.font: xft:Ubuntu Mono:pixelsize=14,style=regular
+URxvt.font: xft:Ubuntu Mono:pixelsize=24,style=regular
 URxvt.cursorBlink: true
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: x-www-browser
@@ -37,5 +37,8 @@ URxvt*scrollTtyKeypress: true
 *color7:  #cccccc
 *color15: #ffffff
 
-Xcursor.size: 16
 xterm*metaSendsEscape: true
+
+/* 1.5x scaling */
+Xft.dpi: 144
+Xcursor.size: 32
