@@ -3,13 +3,13 @@
 set -e
 set -u
 
-INSTALLED=$(node --version)
+INSTALLED=$(node --version || echo "NONE")
 
 TARBASE=$(
   curl --silent --show-error --fail \
   https://nodejs.org/dist/latest/SHASUMS256.txt \
   | grep -oE node-v.+linux-x64 | head -n1)
-  
+
 LATEST=$(echo $TARBASE | grep -Eo "v[0-9]+\.[0-9]+\.[0-9]+")
 
 if [ "$INSTALLED" == "$LATEST" ]
@@ -44,11 +44,11 @@ fi
 echo "Moving new node to ~/node"
 mv "$DIR/$TARBASE" ~/node
 
-echo "Updating npm"
-npm update --global
+#echo "Updating npm"
+#npm update npm --global
 
 echo "Re-installing global packages: $GLOBAL_PACKAGES"
-npm install --global $GLOBAL_PACKAGES
+#npm install --global $GLOBAL_PACKAGES
 
 echo "Deleting old node ~/node.bak"
 rm -rf ~/node.bak
