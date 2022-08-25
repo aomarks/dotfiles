@@ -71,8 +71,3 @@ no() {
   awk '{print FILENAME"\t"$0}' */* | grepy "$@"
   cd - > /dev/null
 }
-
-recompile-ycm() {
-  cd ~/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer --tern-completer
-}
