@@ -111,7 +111,7 @@ bindsym $mod+Shift+backslash move scratchpad
 bindsym $mod+backslash scratchpad show
 
 # Special scratch windows
-bindsym $mod+m        exec i3-scratcher.sh "x-www-browser --app=https://open.spotify.com/" open.spotify.com
+bindsym $mod+m        exec i3-scratcher.sh "x-www-browser --app=https://music.youtube.com/" music.youtube.com
 bindsym $mod+question exec i3-scratcher.sh "x-www-browser --app=https://www.aomarks.com/cheat.html" www.aomarks.com__cheat.html
 bindsym $mod+y        exec i3-scratcher.sh "x-www-browser --app=https://youtube.com/feed/subscriptions" youtube.com__feed_subscriptions
 bindsym $mod+i        exec i3-scratcher.sh "x-www-browser --app=https://todoist.com/app" todoist.com__app
