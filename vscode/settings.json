@@ -1,6 +1,4 @@
 {
-  // Editor font (default: Droid Sans Mono).
-  "editor.fontFamily": "Ubuntu Mono",
   // Number of spaces to insert for per Tab press (default: 4).
   "editor.tabSize": 2,
   // Auto-format on save (default: false).
@@ -29,12 +27,12 @@
     // Format JavaScript with Prettier (default: none).
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // Path to neovim for vscode-neovim extension.
-  "vscode-neovim.neovimPath": "/home/aomarks/bin/nvim",
-  // vscode-neovim says it works better with this disabled (default: true).
-  "editor.scrollBeyondLastLine": false,
   // Don't flatten dirs with one file in file explorer (default: true)
   "explorer.compactFolders": false,
   // Always insert a final newline when saving (default: false)
   "files.insertFinalNewline": true,
+  // Always trim trailing whitespace (default: false)
+  "files.trimTrailingWhitespace": true,
+  // Add ".js" to the end of auto-added JS/TS import statements (default: no extension)
+  "javascript.preferences.importModuleSpecifierEnding": "js"
 }
