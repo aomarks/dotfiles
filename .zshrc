@@ -1,8 +1,10 @@
-# A fade of green chevrons
-PROMPT='%B%F{35}❯%F{41}❯%F{47}❯%b%f '
+# A newline, a fade of green chevrons, and the CWD (last part only, and ~ for home dir)
+NEWLINE=$'\n'
+PROMPT="${NEWLINE}%B%F{35}❯%F{41}❯%F{47}❯%b%f %F{032}%1~%f "
+unset NEWLINE
 
-# Show the CWD (last part only, and ~ for home dir), and time on the right
-RPROMPT='%1~ %*'
+# Show the time on the right
+RPROMPT='%*'
 
 # Load the more advanced zsh completions system
 autoload -Uz compinit && compinit
@@ -33,3 +35,10 @@ lazy_load_nvm() {
 alias node="lazy_load_nvm && node"
 alias npm="lazy_load_nvm && npm"
 alias nvm="lazy_load_nvm && nvm"
+
+# Make ls show colors
+export CLICOLOR=1
+
+# A better logger for Wireit.
+# TODO remove when the quiet logger is the default.
+export WIREIT_LOGGER=quiet
